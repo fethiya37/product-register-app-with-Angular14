@@ -1,0 +1,25 @@
+<div>
+  <div class="card">
+    <div class="header">
+      <h3 style="display: inline;">Product List</h3>
+      <button type="button" class="btn btn-success" routerLink="new">Add</button>
+      <button type="button" class="btn btn-warning" (click)="deleteSelected()">Mass Delete</button>  
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-product-card *ngFor="let product of products; index as i"
+             [suk]="product.suk"
+             [name]="product.name"
+             [price]="product.price"
+             [size]="product.size" 
+             [id] = "product.id"
+             >
+          </app-product-card>
+        </div>
+  </div>
+ 
+
+</div>
+</div>

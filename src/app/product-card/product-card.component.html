@@ -1,0 +1,12 @@
+<div class="col-md-3">
+    <div class="card">
+        <div class="card-body">
+          <p>{{suk}}</p>
+          <p>{{name}}</p>
+          <p>{{price}}</p>
+          <p>{{size}}</p>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" [ngModel]="value" type="checkbox" (ngModelChange)="onClick($event)" id="flexCheckDefault">
+        </div> 
+</div>

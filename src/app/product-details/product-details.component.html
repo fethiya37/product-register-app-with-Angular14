@@ -1,0 +1,39 @@
+<div class="container">
+<h3>Add List</h3>
+<div class="form-container">
+  <form #noteForm="ngForm" (ngSubmit)="onSubmit(noteForm)">
+     <div class="field">
+       <div class="control">
+        <label  class="form-label" for="suk">SUK</label><input type="text"  name="suk" [ngModel]="product.suk"  class="form-control">
+       </div>  
+     </div>
+     <div class="field">
+      <div class="control">
+       <label  class="form-label" for="name">NAME</label><input type="text" name="name" [ngModel]="product.name"  class="form-control">
+      </div>  
+    </div>
+    <div class="field">
+      <div class="control">
+       <label  class="form-label" for="price">PRICE</label><input type="text" name="price" [ngModel]="product.price"  class="form-control">
+      </div>  
+    </div>
+    <div class="field">
+      <div class="control">
+       <label  class="form-label" for="size">SIZE</label><input type="text" name="size" [ngModel]="product.size"  class="form-control">
+      </div>  
+    </div>
+   
+     <br>
+    
+     <div class="field is-grouped is-pulled-right">
+         <div class="">
+             <button class="btn btn-warning" type="button" (click)="cancel()" >Cancel</button>
+         </div>
+         <div class="">
+             <button class="btn btn-success" type="submit" [disabled]="!noteForm.valid">Save</button>
+         </div>
+     </div>
+ 
+  </form>  
+ </div>
+
